@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from'react'
+import {useState} from 'react'
+import Update from './Update'
+import Update2 from './Update2'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App(){
+    let[user, setUser] = useState('swrna')
+    return(
+        <>
+        <h1>{user}</h1>
+        <Update/>
+        <Update2/>
+        </>
+    )
 }
-
-export default App;
