@@ -1,0 +1,17 @@
+[
+    {
+        "name":"swarnaraj",
+        "age":21,
+        "place":"hyderabad"
+    },
+    {
+        "name":"sandeep",
+        "age":22,
+        "place":"sathupally"
+    },
+    {
+        "name":"sai",
+        "age":21,
+        "place":"mahabunagar"
+    }
+]

@@ -2,6 +2,7 @@ import React from 'react'
 import {useState} from 'react'
 
 export default function Update(){
+    
     const person={
         fname: 'swarnraj',
         lname:'alwala'
