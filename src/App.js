@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { createContext } from "react";
+import CompA from "./components/CompA";
 // import {useState} from 'react'
 // import Update from './Update'
 // import Update2 from './Update2'
@@ -15,10 +17,16 @@ import Imageupdate from './Imageupdate'
 // import Effect3 from './Effect3'
 // import Weather from './Weather'
 
+import UseRef from "./UseRef";
 import UseMemo from "./UseMemo";
+import UseRef2 from "./UseRef2";
 // import ControlledComp from "./ControlledComp";
 // import Search from "./Search";
+import UseRef3 from "./UseRef3";
+export const context = createContext()
 export default function App() {
+
+  let uid = 'swarnaraj'
   return (
     <>
      <BrowserRouter>
@@ -35,6 +43,14 @@ export default function App() {
             <Route path='/image' element={<Imageupdate/>}></Route>
         </Routes>
      </BrowserRouter>
+
+     <UseRef/>
+     {/* <UseRef2/> */}  {/**rerendering */}
+     <UseRef3/>
+    <context.Provider value={uid}>
+      <CompA/>
+    </context.Provider>
+     
     </>
   );
 }
