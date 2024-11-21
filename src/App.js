@@ -3,6 +3,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { createContext } from "react";
 import CompA from "./components/CompA";
+import Add from './higherorderComponentes/Add'
+import Del from './higherorderComponentes/Del'
+import Hoc from './higherorderComponentes/Hoc'
 // import {useState} from 'react'
 // import Update from './Update'
 // import Update2 from './Update2'
@@ -42,7 +45,7 @@ export default function App() {
             <Route path='/UseMemo' element={<UseMemo/>}></Route>
             <Route path='/image' element={<Imageupdate/>}></Route>
         </Routes>
-     </BrowserRouter>
+     </BrowserRouter> 
 
      <UseRef/>
      {/* <UseRef2/> */}  {/**rerendering */}
@@ -51,6 +54,9 @@ export default function App() {
       <CompA/>
     </context.Provider>
      
+
+     <Hoc x={Add}/>
+     <Hoc x={Del}/>
     </>
   );
 }
